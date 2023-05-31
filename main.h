@@ -5,10 +5,10 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-/* utils.c */
+/* the tools.c */
 int _strlen(const char *);
 int print(char *);
-char *itoa(long int, int);
+char *intasc(long int, int);
 
 /* printf.c */
 int _printf(const char *, ...);
@@ -17,18 +17,18 @@ int _printf(const char *, ...);
 int handler(const char *, va_list);
 int percent_handler(const char *, va_list, int *);
 
-/* printers */
+/* all print functions */
 int print_string(va_list);
 int print_char(va_list);
 int print_integer(va_list);
 int print_binary(va_list);
-int print_rot(va_list);
-int print_unsigned(va_list);
+int print_rot13(va_list);
+int print_unsigned_integer(va_list);
 int print_octal(va_list);
-int print_hexadecimal_low(va_list);
-int print_hexadecimal_upp(va_list);
+int print_lower_hexadecimal(va_list);
+int print_upper_hexadecimal(va_list);
 int print_pointer(va_list);
-int print_rev_string(va_list);
+int print_reverse_string(va_list);
 
 /* _putchar.c */
 int _putchar(char);

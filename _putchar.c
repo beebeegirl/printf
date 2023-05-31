@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _putchar - writes the char c to stdout
- * @c: The char to prnt
- *
+ * _putchar - main block
+ * Description: it writes the char c to stdout
+ * @c: The char to print
  * Return: success 1.
  * On error, -1 is returned, and errno set appropriately.
  */
@@ -13,9 +13,9 @@ int _putchar(char c)
 }
 
 /**
- * buffer - Save char in a buffer
+ * buffer - another block
+ * Description: it saves char in a buffer
  * @c: Char
- *
  * Return: 1
  **/
 int buffer(char c)

@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * print_binary - Print a binary number
+ * print_binary - this is the main block of code
+ * Description: it prints a binary number
  * @list: Number to print in binary
- *
  * Return: Length of the numbers converted
  **/
 int print_binary(va_list list)
 {
-	char *p_buff;
+	char *h;
 	int size;
 
-	p_buff = itoa(va_arg(list, unsigned int), 2);
+	h = intasc(va_arg(list, unsigned int), 2);
 
-	size = print(p_buff);
+	size = print(h);
 
 	return (size);
 }

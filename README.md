@@ -1,4 +1,4 @@
-0x11. C - printf team project of B & D
+0x11. C - printf team project of Blessing Nite & Dorcas Olanrewaju
 
 
 Tasks

@@ -4,33 +4,34 @@
 int _strcmp(char *, char *);
 
 /**
- * print_pointer - Print a number in hex format
- * @list: Numb to print
- *
- * Return: Length of numb
+ * print_pointer - this is the main block
+ * Description: it prints a number in hexadecimal format
+ * @list: the number to print
+ * Return: Length of number
  **/
 int print_pointer(va_list list)
 {
-	char *p_buff;
+	char *h;
 	int size;
 
-	p_buff = itoa(va_arg(list, unsigned long int), 16);
+	h = intasc(va_arg(list, unsigned long int), 16);
 
-	if (!_strcmp(p_buff, "0"))
+	if (!_strcmp(h, "0"))
 		return (print("(nil)"));
 
 	size = print("0x");
 
-	if (!_strcmp(p_buff, "-1"))
+	if (!_strcmp(h, "-1"))
 		size += print("ffffffffffffffff");
 	else
-		size += print(p_buff);
+		size += print(h);
 
 	return (size);
 }
 
 /**
- * _strcmp - Compare two strings
+ * _strcmp - another block
+ * Description: it compares two strings
  * @s1: Strng 1
  * @s2: Strng 2
  * Return: Int

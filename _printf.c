@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _printf - A functn that produces output according to a format
+ * _printf - this is the main function
+ * Description: it is a function that produces
+ * output according to a format
  * @format: A char string. The format string
  * is composed of zero or more directives
- *
  * Return: The number of characters printed (excluding
  * the null byte used to end output to strings)
  **/

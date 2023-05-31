@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * print_octal - Print a unsigned octal
- * @list: Numb to print
- *
- * Return: Lngth of the numb
+ * print_octal - this is the main block of code
+ * Description: it prints an unsigned octal
+ * @list: the number to print
+ * Return: Length of the number
  **/
 int print_octal(va_list list)
 {
-	char *p_buff;
+	char *h;
 	int size;
 
-	p_buff = itoa(va_arg(list, unsigned int), 8);
+	h = intasc(va_arg(list, unsigned int), 8);
 
-	size = print((p_buff != NULL) ? p_buff : "NULL");
+	size = print((h != NULL) ? h : "NULL");
 
 	return (size);
 }

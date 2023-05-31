@@ -13,20 +13,6 @@ int print_reverse_string(va_list list)
 
 	str = va_arg(list, const char *);
 
-	if (!str)
-		str = "(null)";
-	while (str[i])
-		i++;
-	while (i >= 0)
-	{
-		size += _putchar(str[i]);
-		i--;
-	}
-	size--;
-	return (size);
-}
-
-/**
 	size = _strlen(str);
 
 	for (i = size - 1; i >= 0; i--)
@@ -35,14 +21,3 @@ int print_reverse_string(va_list list)
 	return (size);
 }
 
-int count_fun = 0, i = 0;
-	char *s = va_arg(args, char *);
-
-	while (i >= 0)
-	{
-		count_fun += _putchar(s[i]);
-		i--;
-	}
-	count_fun--;
-	return (count_fun);
-**/

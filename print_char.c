@@ -7,7 +7,7 @@
  */
 int print_char(va_list list)
 {
-	int xyz;
+	char xyz;
 
 	xyz = va_arg(list, int);
 

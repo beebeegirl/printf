@@ -1,36 +1,42 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
- * _putchar - main block
- * Description: it writes the char c to stdout
- * @c: The char to print
- * Return: success 1.
- * On error, -1 is returned, and errno set appropriately.
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ * Description: _putchar uses a local buffer of 1024 to call write
+ * as little as possible
  */
 int _putchar(char c)
 {
-	return (buffer(c));
+	static char buf[1024];
+	static int i;
+
+	if (c == -1 || i >= 1024)
+	{
+		write(1, &buf, i);
+		i = 0;
+	}
+	if (c != -1)
+	{
+		buf[i] = c;
+		i++;
+	}
+	return (1);
 }
 
 /**
- * buffer - another block
- * Description: it saves char in a buffer
- * @c: Char
- * Return: 1
- **/
-int buffer(char c)
+ * _puts - prints a string to stdout
+ * @str: pointer to the string to print
+ * Return: number of chars written
+ */
+int _puts(char *str)
 {
-	static char buffering[1024];
-	static int i;
+	register int i;
 
-	if (c == -1 || i == 1024)
-	{
-		write(1, buffering, i);
-		i = 0;
-	}
-
-	if (c != -1)
-		buffering[i++] = c;
-
-	return (1);
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }
